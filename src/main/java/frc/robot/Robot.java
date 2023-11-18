@@ -101,7 +101,6 @@ public class Robot extends TimedRobot {
   public void teleopPeriodic() {
      
     m_robotDrive.tankDrive(-m_controller.getLeftY(), -m_controller.getRightY());
-    // Test comment
   }
 
   /** This function is called once when the robot is disabled. */
