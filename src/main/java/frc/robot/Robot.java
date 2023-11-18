@@ -73,7 +73,13 @@ public class Robot extends TimedRobot {
    * @return 
    */
   @Override
-  public void robotPeriodic() {}
+  public void robotPeriodic() {
+    //NOT Stolen code
+    m_robotDrive.tankDrive(-m_controller.getLeftY(), -m_controller.getRightY());
+    double CntrolYAxisMovementLft = m_leftDrive.get();
+    double CntrolYAxisMovementRht = m_rightDrive.get();
+
+  }
 
   /**
    * This autonomous (along with the chooser code above) shows how to select between different
