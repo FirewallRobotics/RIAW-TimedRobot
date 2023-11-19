@@ -93,14 +93,15 @@ public class Robot extends TimedRobot {
   /** This function is called once when teleop is enabled. */
   @Override
   public void teleopInit() {
-
+    
   }
 
   /** This function is called periodically during operator control. */
   @Override
   public void teleopPeriodic() {
-     
+
     m_robotDrive.tankDrive(-m_controller.getLeftY(), -m_controller.getRightY());
+    System.out.println("Running teleop... " + (m_leftDrive.get()) + ", " + (m_rightDrive.get()));
   }
 
   /** This function is called once when the robot is disabled. */
