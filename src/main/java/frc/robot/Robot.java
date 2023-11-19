@@ -19,6 +19,8 @@ import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import com.revrobotics.CANSparkMax;
 import com.revrobotics.CANSparkMaxLowLevel.MotorType;
+import edu.wpi.first.cameraserver.CameraServer;
+import edu.wpi.first.wpilibj.TimedRobot; 
 
 
 
@@ -62,6 +64,7 @@ public class Robot extends TimedRobot {
     m_chooser.addOption("My Auto", kCustomAuto);
     SmartDashboard.putData("Auto choices", m_chooser);
     m_rightDrive.setInverted(true);
+    CameraServer.startAutomaticCapture();
   }
 
   /**
@@ -126,14 +129,15 @@ public class Robot extends TimedRobot {
   /** This function is called once when teleop is enabled. */
   @Override
   public void teleopInit() {
-
+    
   }
 
   /** This function is called periodically during operator control. */
   @Override
   public void teleopPeriodic() {
-     
+
     m_robotDrive.tankDrive(-m_controller.getLeftY(), -m_controller.getRightY());
+    System.out.println("Running teleop... " + (m_leftDrive.get()) + ", " + (m_rightDrive.get()));
   }
 
   /** This function is called once when the robot is disabled. */
