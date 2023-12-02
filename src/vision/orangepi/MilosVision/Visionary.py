@@ -8,6 +8,9 @@ from cscore import CameraServer
 import cv2
 import numpy as np
 
+#When last update print
+print("Updated 2023-12-2-117")
+
 #Camera init
 CameraServer.enableLogging()
 
