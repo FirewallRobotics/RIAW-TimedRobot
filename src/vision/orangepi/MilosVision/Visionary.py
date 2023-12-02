@@ -26,7 +26,7 @@ output = CameraServer.putVideo("Cam1", width, height)
 #Find apriltages
 #output processed image
 while True:
-   time, input_img = cv2.grabFrame(input_img)
+   time, input_img = cvSink.grabFrame(input_img)
 
    if time == 0: # There is an error
       continue
