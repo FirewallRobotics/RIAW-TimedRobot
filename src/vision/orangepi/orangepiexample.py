@@ -2,6 +2,7 @@ from threading import Thread
 import cv2
 import numpy
 import apriltag
+import networktables # Import From NetworkTables
 
 class myWebcamVideoStream:
   def __init__(self, src=0):
